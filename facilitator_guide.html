@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Facilitator Guide: Results Section Session</title>
+<style>
+  :root {
+    --bg: #ffffff; --fg: #1d2327; --muted: #5d6870; --line: #d8dde1;
+    --accent: #1f5560; --maroon: #9e2a2b; --soft: #f1f5f6; --warn: #fff6e5;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #15191b; --fg: #e8ecee; --muted: #9aa6ad; --line: #2e373c;
+      --accent: #6fb4c2; --maroon: #e58a8b; --soft: #1d2427; --warn: #2a2418;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0; background: var(--bg); color: var(--fg);
+    font: 16px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 24px 16px 80px; }
+  h1 { font-size: 1.9rem; line-height: 1.2; margin: 0 0 4px; }
+  h2 { font-size: 1.35rem; margin: 2.4rem 0 .6rem; padding-top: .4rem; border-top: 2px solid var(--accent); color: var(--accent); }
+  h3 { font-size: 1.08rem; margin: 1.6rem 0 .4rem; }
+  p, li { max-width: 72ch; }
+  .sub { color: var(--muted); margin: 0 0 1rem; }
+  nav { background: var(--soft); border: 1px solid var(--line); border-radius: 8px; padding: 10px 16px; margin: 1rem 0 1.5rem; }
+  nav ol { margin: 4px 0; padding-left: 1.2rem; columns: 2; column-gap: 28px; }
+  nav a { color: var(--accent); text-decoration: none; }
+  nav a:hover { text-decoration: underline; }
+  table { border-collapse: collapse; width: 100%; margin: .6rem 0 1rem; font-size: .93rem; }
+  th, td { border-bottom: 1px solid var(--line); padding: 6px 8px; text-align: left; vertical-align: top; }
+  th { border-bottom: 2px solid var(--accent); }
+  td.num, th.num { text-align: right; white-space: nowrap; }
+  .tablewrap { overflow-x: auto; }
+  .box { background: var(--soft); border-left: 4px solid var(--accent); padding: 8px 14px; margin: 1rem 0; border-radius: 0 6px 6px 0; }
+  .box.warn { background: var(--warn); border-left-color: var(--maroon); }
+  .box p { margin: .3rem 0; }
+  .m { color: var(--maroon); font-weight: 600; }
+  details { border: 1px solid var(--line); border-radius: 6px; margin: .7rem 0; padding: 4px 12px; }
+  summary { cursor: pointer; font-weight: 600; padding: 4px 0; }
+  code { background: var(--soft); padding: 1px 5px; border-radius: 4px; font-size: .9em; }
+  ul.check { list-style: none; padding-left: 0; }
+  ul.check li::before { content: "\2610\00a0"; }
+  .tag { display: inline-block; font-size: .78rem; border: 1px solid var(--accent); color: var(--accent); border-radius: 10px; padding: 0 8px; margin-left: 6px; }
+  @media print {
+    body { font-size: 11pt; }
+    nav { display: none; }
+    details { border: none; padding: 0; }
+    details > * { display: block; }
+    h2 { break-after: avoid; }
+    tr, .box { break-inside: avoid; }
+  }
+  @media (max-width: 640px) { nav ol { columns: 1; } h1 { font-size: 1.5rem; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<h1>Facilitator Guide</h1>
+<p class="sub">Session 4 · Writing an Effective Results Section · 90 minutes</p>
+
+<div class="tablewrap">
+<table>
+  <tr><th>Workshop</th><td>Workshop on AI in Health Research (manuscript writing in the AI era), supported by the National Academy of Medical Sciences (NAMS), India</td></tr>
+  <tr><th>When</th><td>Day 1, 23 November 2026, 15:30–17:00</td></tr>
+  <tr><th>Where</th><td>Sarojini Naidu Hall, Kasturba Hospital, MGIMS Sevagram</td></tr>
+  <tr><th>Presenter</th><td>Dr Rahul Narang, Dean and Professor &amp; Head, Microbiology, AIIMS Bibinagar</td></tr>
+  <tr><th>Audience</th><td>Medical residents, students, and early or mid-career faculty</td></tr>
+  <tr><th>Method</th><td>Examples and table/figure critique. Three short activities.</td></tr>
+  <tr><th>Slides</th><td><a href="./">Slide deck (HTML)</a> · <a href="Results_Session4_NAMS_MGIMS.pdf">PDF copy</a>. Slides adapted from material by Dr Arun Mitra, AIIMS Bibinagar.</td></tr>
+</table>
+</div>
+
+<nav aria-label="Contents">
+<strong>On this page</strong>
+<ol>
+  <li><a href="#goals">What people should leave with</a></li>
+  <li><a href="#prep">Before the session</a></li>
+  <li><a href="#run">Run of show (minute by minute)</a></li>
+  <li><a href="#a1">Activity 1: where does it go?</a></li>
+  <li><a href="#a2">Activity 2: fix this table, fix this figure</a></li>
+  <li><a href="#a3">Activity 3: catch the AI</a></li>
+  <li><a href="#flex">Running late or early</a></li>
+  <li><a href="#qa">Questions you may get</a></li>
+  <li><a href="#scope">Stay in your lane: neighbouring sessions</a></li>
+  <li><a href="#verify">Check before you teach</a></li>
+</ol>
+</nav>
+
+<h2 id="goals">1. What people should leave with</h2>
+<ul>
+  <li>Results mirror Methods, in the same order. Paragraph 1 is participant flow.</li>
+  <li>Each finding has one home: text, table or figure. Then cross-reference.</li>
+  <li>Every estimate has direction, size, a 95% CI and an exact <em>P</em>.</li>
+  <li>They can fix a flawed Table 1 and a flawed figure.</li>
+  <li>For lab data: n/N (%) per drug, breakpoint standard and version, isolates are not patients.</li>
+  <li>They can check an AI-written Results paragraph against its source, and they know that the author stays accountable.</li>
+</ul>
+<div class="box"><p><strong>The one slide to photograph:</strong> slide 32, "Results self-check".</p></div>
+
+<h2 id="prep">2. Before the session</h2>
+<h3>The day before</h3>
+<ul class="check">
+  <li>Open the deck once on the room laptop. It is one self-contained file, so no internet is needed.</li>
+  <li>Press <code>S</code> to open speaker view. Each slide has a clock time and notes there.</li>
+  <li>Put the PDF on a USB stick and on the desktop as a backup. The PDF has no speaker notes and prints each tab as its own page.</li>
+  <li>Read this guide's <a href="#verify">"Check before you teach"</a> list.</li>
+  <li>Decide how pairs will form (neighbour to neighbour is fine).</li>
+</ul>
+<h3>In the room (15 minutes before)</h3>
+<ul class="check">
+  <li>Projector shows the full slide, including the footer. Check the back row can read the small text on slides 22, 24, 27 and 28.</li>
+  <li>Clicker or keyboard works. Many slides reveal content on a click.</li>
+  <li>Phone timer or wall clock visible to you. The speaker notes use a clock time, so note your start time.</li>
+  <li>Microphone works for taking answers from the room.</li>
+</ul>
+
+<h2 id="run">3. Run of show</h2>
+<p>Times are clock minutes from the start. They add up to 90.</p>
+<div class="tablewrap">
+<table>
+  <thead><tr><th>Minutes</th><th>Slides</th><th>Block and what to do</th></tr></thead>
+  <tbody>
+  <tr><td class="num">0–2</td><td>1–2</td><td><strong>Welcome and contents.</strong> Name the three activities. Say that interpretation belongs to the Discussion session on Day 2.</td></tr>
+  <tr><td class="num">2–3</td><td>3</td><td>Quote slide: "Methods was the recipe. Results is the dish."</td></tr>
+  <tr><td class="num">3–5</td><td>4</td><td>Link to Session 3 (Methods) just before this one. Ask what that session set up.</td></tr>
+  <tr><td class="num">5–8</td><td>5</td><td>Mirror principle. Anything in Results not set up in Methods is a red flag.</td></tr>
+  <tr><td class="num">8–10</td><td>6</td><td>Four steps. Say which activity tests which step.</td></tr>
+  <tr><td class="num">10–13</td><td>7</td><td>Participant flow. Link to the "isolate or patient?" question.</td></tr>
+  <tr><td class="num">13–16</td><td>8</td><td>State every finding only once.</td></tr>
+  <tr><td class="num">16–17</td><td>9</td><td>Call and response: read the left side, let the room answer.</td></tr>
+  <tr><td class="num">17–19</td><td>10</td><td>Where to place: five rows, do not over-explain.</td></tr>
+  <tr><td class="num">19–22</td><td>11</td><td>A complete result: direction, size, precision, exact <em>P</em>.</td></tr>
+  <tr><td class="num">22–25</td><td>12</td><td>Three flagged sentences: one minute per tab. <strong>End of Part A.</strong></td></tr>
+  <tr><td class="num">25–30</td><td>13</td><td><strong>Activity 1.</strong> Read each scenario, take a show of hands.</td></tr>
+  <tr><td class="num">30–35</td><td>14</td><td>Answers and questions. <strong>End of Activity 1.</strong></td></tr>
+  <tr><td class="num">35–39</td><td>15</td><td><strong>Part B.</strong> Tables: summary measures, n (%), title above, footnotes below.</td></tr>
+  <tr><td class="num">39–42</td><td>16</td><td><em>P</em>-values in Table 1: RCT tab, then observational tab.</td></tr>
+  <tr><td class="num">42–44</td><td>17</td><td>Figure type by study design. Pick the designs your room uses.</td></tr>
+  <tr><td class="num">44–46</td><td>18</td><td>Data-ink ratio.</td></tr>
+  <tr><td class="num">46–48</td><td>19</td><td>Reproducible figures (three tabs).</td></tr>
+  <tr><td class="num">48–50</td><td>20</td><td>Observational results (three tabs). Say "associated with", never "caused".</td></tr>
+  <tr><td class="num">50–52</td><td>21</td><td>Diagnostic results: 2×2, CIs, ROC.</td></tr>
+  <tr><td class="num">52–55</td><td>22</td><td><strong>Lab &amp; microbiology Results.</strong> Five rules. <strong>End of Part B.</strong></td></tr>
+  <tr><td class="num">55–60</td><td>23</td><td><strong>Activity 2a.</strong> Flawed Table 1. Pairs list the errors (3 min), then answers aloud (2 min).</td></tr>
+  <tr><td class="num">60–65</td><td>24</td><td>"Errors" tab (8 errors), then "Fixed table" tab.</td></tr>
+  <tr><td class="num">65–70</td><td>25</td><td><strong>Activity 2b.</strong> Flawed pie (Critique tab, 2 min), then the Fixed tab. <strong>End of Activity 2.</strong></td></tr>
+  <tr><td class="num">70–73</td><td>26</td><td><strong>Part C.</strong> What AI can and cannot do. Privacy line.</td></tr>
+  <tr><td class="num">73–75</td><td>27</td><td><strong>Activity 3.</strong> Source table. Give 2 minutes to read it.</td></tr>
+  <tr><td class="num">75–79</td><td>28</td><td>The AI paragraph. Pairs find the errors (4 min).</td></tr>
+  <tr><td class="num">79–83</td><td>29</td><td>Answer key, one error per click. Then the corrected paragraph. <strong>End of Activity 3.</strong></td></tr>
+  <tr><td class="num">83–84</td><td>30</td><td>Six-point verify check, then disclosure.</td></tr>
+  <tr><td class="num">84–85</td><td>31</td><td>Numbers from code, not chat. <strong>End of Part C.</strong></td></tr>
+  <tr><td class="num">85–87</td><td>32</td><td><strong>Wrap-up.</strong> Results self-check. Ask people to tick it against their own draft.</td></tr>
+  <tr><td class="num">87–88</td><td>33</td><td>Take-home message. Last line: verify every AI-generated number.</td></tr>
+  <tr><td class="num">88–89:30</td><td>34</td><td>Questions: take two or three.</td></tr>
+  <tr><td class="num">89:30–90</td><td>35</td><td>Thank you. Credit: slides adapted from material by Dr Arun Mitra, AIIMS Bibinagar.</td></tr>
+  </tbody>
+</table>
+</div>
+
+<h2 id="a1">4. Activity 1: where does it go? <span class="tag">25–35 min</span></h2>
+<p><strong>Goal:</strong> practise the text / table / figure decision. <strong>Slides 13–14.</strong></p>
+<ol>
+  <li>Click to show scenario 1. Ask: "Text, table or figure?" Take a show of hands.</li>
+  <li>Take one reason from one person. Then click the next scenario.</li>
+  <li>For scenario 6 (deliberately ambiguous), ask someone to defend their choice. Both answers can be right.</li>
+</ol>
+<details>
+  <summary>Answer key</summary>
+  <div class="tablewrap">
+  <table>
+    <tr><th>#</th><th>Scenario</th><th>Decision</th><th>Why</th></tr>
+    <tr><td>1</td><td>A single overall prevalence</td><td>Text</td><td>One number is faster in a sentence.</td></tr>
+    <tr><td>2</td><td>Baseline characteristics, 12 variables × 2 groups</td><td>Table</td><td>Many exact numbers.</td></tr>
+    <tr><td>3</td><td>Survival over 24 months by arm</td><td>Figure</td><td>Shows shape over time (Kaplan–Meier).</td></tr>
+    <tr><td>4</td><td>Participant flow</td><td>Figure</td><td>Flow diagram accounts for everyone.</td></tr>
+    <tr><td>5</td><td>Distribution of CRP in 30 patients</td><td>Figure</td><td>A dot plot shows every point. A bar of means would hide it.</td></tr>
+    <tr><td>6</td><td>Three subgroup odds ratios</td><td>Table or forest plot</td><td>Table for exact values. Forest plot to compare intervals.</td></tr>
+  </table>
+  </div>
+</details>
+
+<h2 id="a2">5. Activity 2: fix this table, fix this figure <span class="tag">55–70 min</span></h2>
+<p><strong>Slides 23–25.</strong> A hypothetical RCT of two surgical dressings. Arms: Dressing A n = 105, Dressing B n = 108.</p>
+
+<h3>2a. Fix this table (55–65)</h3>
+<ol>
+  <li>Show slide 23. Say: "Find every problem. Pairs. Three minutes."</li>
+  <li>Walk the room. Do not click on yet.</li>
+  <li>Take answers aloud for two minutes. Write them on a board if you have one.</li>
+  <li>Click to slide 24. Go through the "Errors" tab, then the "Fixed table" tab.</li>
+</ol>
+<p>The flawed table:</p>
+<div class="tablewrap">
+<table>
+  <tr><th>Variable</th><th>Dressing A</th><th>Dressing B</th><th>P</th></tr>
+  <tr><td>Age (years)</td><td>54.2 ± 11.37</td><td>55 ± 10.2</td><td>0.512</td></tr>
+  <tr><td>Male</td><td>61</td><td>58</td><td>0.73</td></tr>
+  <tr><td>Length of stay (days), mean ± SD</td><td>9.8 ± 7.9</td><td>10.6 ± 8.4</td><td>0.000</td></tr>
+  <tr><td>Diabetes</td><td>29.52%</td><td>26.9 %</td><td>0.684</td></tr>
+</table>
+</div>
+<details open>
+  <summary>The 8 planted errors</summary>
+  <ol>
+    <li>No group n in the header.</li>
+    <li><em>P</em>-values in an RCT Table 1 (randomisation handles balance; any difference is by chance).</li>
+    <li>Inconsistent decimals (11.37, 10.2, 54.2, 55).</li>
+    <li>A count without a percentage (Male).</li>
+    <li>A percentage without a count (Diabetes).</li>
+    <li>Mean ± SD for skewed length of stay. The SD is almost as large as the mean.</li>
+    <li>"P = 0.000". It should read P &lt; 0.001 (here the whole column goes).</li>
+    <li>No title, footnotes or abbreviations.</li>
+  </ol>
+</details>
+<details>
+  <summary>The fixed table (with the arithmetic)</summary>
+  <p><strong>Table 1.</strong> Baseline characteristics of participants by surgical dressing</p>
+  <div class="tablewrap">
+  <table>
+    <tr><th>Characteristic</th><th>Dressing A (n = 105)</th><th>Dressing B (n = 108)</th></tr>
+    <tr><td>Age, years, mean ± SD</td><td>54.2 ± 11.4</td><td>55.0 ± 10.2</td></tr>
+    <tr><td>Male sex, n (%)</td><td>61 (58.1)</td><td>58 (53.7)</td></tr>
+    <tr><td>Length of stay, days, median (IQR)</td><td>8 (5–12)</td><td>9 (6–13)</td></tr>
+    <tr><td>Diabetes, n (%)</td><td>31 (29.5)</td><td>29 (26.9)</td></tr>
+  </table>
+  </div>
+  <p>IQR, interquartile range; SD, standard deviation. Randomised trial, so no <em>P</em>-values are shown.</p>
+  <p>Check: 61/105 = 58.1%; 58/108 = 53.7%; 31/105 = 29.5%; 29/108 = 26.9%. (The flawed "29.52%" is 31/105 shown to two decimals.)</p>
+</details>
+
+<h3>2b. Fix this figure (65–70)</h3>
+<ol>
+  <li>Show slide 25 on the "Critique" tab. It shows 640 clinical isolates by specimen as an exploded rainbow pie. Ask: "What would you change?" Two minutes.</li>
+  <li>Click the "Fixed" tab. Compare.</li>
+</ol>
+<details open>
+  <summary>What is wrong with the pie, and the fix</summary>
+  <ul>
+    <li>Exploded slices and a drop shadow add no information.</li>
+    <li>Rainbow colours with no meaning.</li>
+    <li>Percentages to two decimals (45.94%).</li>
+    <li>A boxed legend that you must look up.</li>
+    <li>An ALL-CAPS title.</li>
+    <li>Five slices of similar size are hard to rank by eye.</li>
+  </ul>
+  <p><strong>Fix:</strong> ordered horizontal bars, direct "n (%)" labels, one colour (#1f5560), plain title.</p>
+  <div class="tablewrap">
+  <table>
+    <tr><th>Specimen</th><th class="num">n</th><th class="num">%</th></tr>
+    <tr><td>Urine</td><td class="num">294</td><td class="num">45.9</td></tr>
+    <tr><td>Blood</td><td class="num">115</td><td class="num">18.0</td></tr>
+    <tr><td>Pus</td><td class="num">96</td><td class="num">15.0</td></tr>
+    <tr><td>Sputum</td><td class="num">77</td><td class="num">12.0</td></tr>
+    <tr><td>Others</td><td class="num">58</td><td class="num">9.1</td></tr>
+    <tr><td><strong>Total</strong></td><td class="num"><strong>640</strong></td><td class="num"><strong>100.0</strong></td></tr>
+  </table>
+  </div>
+</details>
+
+<h2 id="a3">6. Activity 3: catch the AI <span class="tag">73–83 min</span></h2>
+<p><strong>Slides 27–29.</strong> Cross-sectional study of 312 <em>E. coli</em> urine isolates (first isolate per patient). An AI chatbot was asked to write the Results paragraph from the table. The paragraph has 8 planted errors.</p>
+<ol>
+  <li>Slide 27 (73–75): give two minutes to read the source table. Point at the "Tested N" column. It is not 312 for every drug.</li>
+  <li>Slide 28 (75–79): say there are eight errors. Pairs compare the paragraph with the table.</li>
+  <li>Slide 29 (79–83): click the 8 errors one at a time. Ask who found each. Then show the "Corrected paragraph" tab.</li>
+</ol>
+
+<h3>Source data</h3>
+<div class="tablewrap">
+<table>
+  <tr><th>Antibiotic</th><th class="num">Tested N</th><th class="num">Resistant n (%)</th></tr>
+  <tr><td>Ampicillin</td><td class="num">312</td><td class="num">271 (86.9)</td></tr>
+  <tr><td>Ciprofloxacin</td><td class="num">312</td><td class="num">197 (63.1)</td></tr>
+  <tr><td>Ceftriaxone</td><td class="num">312</td><td class="num">168 (53.8)</td></tr>
+  <tr><td>Nitrofurantoin</td><td class="num">298</td><td class="num">22 (7.4)</td></tr>
+  <tr><td>Fosfomycin</td><td class="num">240</td><td class="num">9 (3.8)</td></tr>
+  <tr><td>Meropenem</td><td class="num">312</td><td class="num">14 (4.5)</td></tr>
+</table>
+</div>
+<p>ESBL producers: 158/312 (50.6%). Factors associated with ESBL: prior antibiotic use (3 months) aOR 2.4 (95% CI 1.5–3.9), <em>P</em> &lt; 0.001; hospitalisation (3 months) aOR 1.7 (1.0–2.9), <em>P</em> = 0.048.</p>
+
+<details open>
+  <summary>Answer key: the 8 errors</summary>
+  <div class="tablewrap">
+  <table>
+    <tr><th>#</th><th>Error in the AI text</th><th>Why it is wrong</th><th>Type</th></tr>
+    <tr><td>1</td><td>Ciprofloxacin "36.1%"</td><td>Digits transposed. 197/312 = 63.1%.</td><td>Number</td></tr>
+    <tr><td>2</td><td>Nitrofurantoin 7.4% "of all 312 isolates"</td><td>Denominator is 298 tested. Over 312 it would be 7.1%.</td><td>Denominator</td></tr>
+    <tr><td>3</td><td>Fosfomycin "fully active"</td><td>3.8% resistant (9/240 tested).</td><td>Overstatement</td></tr>
+    <tr><td>4</td><td>"158 patients"</td><td>They are isolates (first isolate per patient, so isolates equal patients here only by design). Name the unit correctly.</td><td>Unit</td></tr>
+    <tr><td>5</td><td>"caused" a two-fold increase</td><td>Cross-sectional data show association only.</td><td>Causal language</td></tr>
+    <tr><td>6</td><td>"significant… P &lt; 0.05"</td><td>Give the exact P = 0.048 with the CI (1.0–2.9). The CI touches the null.</td><td>Statistics</td></tr>
+    <tr><td>7</td><td>"Walia et al., 2023"</td><td>Citation inserted by the model, unverified. Citations do not belong in Results.</td><td>Invented source</td></tr>
+    <tr><td>8</td><td>"should be first-line empirical therapy"</td><td>A recommendation is interpretation. It belongs in the Discussion.</td><td>Interpretation</td></tr>
+  </table>
+  </div>
+</details>
+<details>
+  <summary>Corrected paragraph</summary>
+  <blockquote>Of the 312 <em>E. coli</em> isolates (first isolate per patient), resistance was highest to ampicillin (271/312, 86.9%) and ciprofloxacin (197/312, 63.1%). Nitrofurantoin resistance was 7.4% (22/298 tested) and fosfomycin resistance 3.8% (9/240 tested). Meropenem resistance was 4.5% (14/312). ESBL production was detected in 158 isolates (50.6%). Prior antibiotic use (aOR 2.4, 95% CI 1.5–3.9; <em>P</em> &lt; 0.001) and hospitalisation in the preceding 3 months (aOR 1.7, 95% CI 1.0–2.9; <em>P</em> = 0.048) were associated with ESBL production.</blockquote>
+</details>
+<div class="box">
+  <p><strong>Debrief line:</strong> every one of these errors was fluent and confident. The six-point check on slide 30 catches all eight: trace the numbers (1), check denominators (2), check the unit (4), no causal or "significant" wording (3, 5, 6), no interpretation or citations (7, 8).</p>
+  <p><strong>Privacy reminder:</strong> never upload identifiable patient data to an AI tool.</p>
+</div>
+
+<h2 id="flex">7. Running late or early</h2>
+<h3>If you are behind (cut in this order)</h3>
+<ol>
+  <li>Slide 18 (data-ink): skip, about 2 min.</li>
+  <li>Slide 19 (reproducible figures): show one tab only, about 1 min saved.</li>
+  <li>Slide 20 (observational results): show only the tab that fits your room, about 1 min saved.</li>
+  <li>Slide 21 (diagnostic results): skip, about 2 min.</li>
+  <li>Slide 9 (decision time): skip, 1 min.</li>
+</ol>
+<p class="m">Do not cut: the three activities, slide 22 (lab and microbiology), slide 30 (6-point check) and slide 32 (self-check).</p>
+<h3>If you are ahead</h3>
+<ul>
+  <li>Give Activity 3 a longer pair time (up to 6 minutes).</li>
+  <li>Ask the room to find one problem in a table from their own draft manuscript.</li>
+  <li>Take extra questions on slide 34.</li>
+</ul>
+
+<h2 id="qa">8. Questions you may get</h2>
+<details>
+  <summary>"A reviewer asked for <em>P</em>-values in Table 1 of my RCT. What do I do?"</summary>
+  <p>CONSORT discourages baseline tests in randomised trials, because any difference is by chance. Follow the journal's instructions. If you decline, give a short reason in the response letter.</p>
+</details>
+<details>
+  <summary>"Can I use AI to write my Results section?"</summary>
+  <p>Treat it as a drafting tool for text built from a table you supply. Check every number with the six-point list. Disclose the use following the journal's policy and the ICMJE recommendations. The author is accountable for every word and number. AI is not an author.</p>
+</details>
+<details>
+  <summary>"Does the AI tool I use matter?"</summary>
+  <p>The same checks apply to any tool. The errors in Activity 3 are the kind any language model can make.</p>
+</details>
+<details>
+  <summary>"We follow EUCAST, our colleagues follow CLSI. Which is right?"</summary>
+  <p>Use the standard your laboratory follows. State which one and which version. Do not mix standards within one table.</p>
+</details>
+<details>
+  <summary>"We have only 18 isolates of this organism. Can I give percentages?"</summary>
+  <p>Give n/N. If you give a percentage, add a caveat that the number is small and the estimate is unstable. The slide's rule is: do not report a percentage when N is below 30 without a caveat.</p>
+</details>
+<details>
+  <summary>"How do I count repeat isolates from the same patient?"</summary>
+  <p>Count the first isolate per patient per period. This is the convention for cumulative antibiograms (CLSI M39). Repeat isolates inflate resistance.</p>
+</details>
+<details>
+  <summary>"So what does this result mean? Why did resistance go up?"</summary>
+  <p>Good question. Meaning belongs in the Discussion, which is covered on Day 2. In Results we report what was found.</p>
+</details>
+
+<h2 id="scope">9. Stay in your lane: neighbouring sessions</h2>
+<div class="tablewrap">
+<table>
+  <tr><th>Session</th><th>Covers</th><th>What you do</th></tr>
+  <tr><td>Session 3, Methods (Dr Pradeep Deshmukh), just before</td><td>Design, variables, analysis plan, choice of tests</td><td>Build on it. Do not repeat the test choice in Results.</td></tr>
+  <tr><td>This session</td><td>Organising and presenting results; text vs table vs figure; verifying AI summaries and visuals</td><td>Report what was found. No mechanisms, no recommendations.</td></tr>
+  <tr><td>Session 8, Discussion (Dr B S Garg), Day 2</td><td>Interpretation, comparison with other studies, limitations</td><td>Send "why" and "so what" questions there.</td></tr>
+</table>
+</div>
+
+<h2 id="verify">10. Check before you teach</h2>
+<div class="box warn">
+  <p>These points could not be fully verified when the slides were prepared. Please confirm each one before 23 November.</p>
+</div>
+<ul class="check">
+  <li>CLSI M39 (cumulative antibiogram) wording on first isolate per patient per period and on the 30-isolate minimum. Check the current edition.</li>
+  <li>CLSI M100 or EUCAST edition and year used in your own laboratory. Slide 22 says "(edition, year)" on purpose.</li>
+  <li>"Walia et al., 2023" on slide 28 is a planted unverified citation. Do not cite it as real.</li>
+  <li>Journal and publisher policies on AI-created or AI-altered images change often. Slide 31 says "many publishers". Check any journal you name.</li>
+  <li>ICMJE wording on AI use and disclosure. Check the current version.</li>
+  <li>Projector test: every slide was checked in a PDF print, not on a projector.</li>
+</ul>
+
+<h3>Files</h3>
+<ul>
+  <li><a href="./">Slide deck (HTML)</a>, with speaker notes (press <code>S</code>).</li>
+  <li><a href="Results_Session4_NAMS_MGIMS.pdf">PDF copy of the slides</a>.</li>
+</ul>
+
+</div>
+<script>
+  // Open every answer key before printing, so the PDF shows all answers.
+  function openAll() { document.querySelectorAll("details").forEach(function (d) { d.open = true; }); }
+  window.addEventListener("beforeprint", openAll);
+  if (location.search.indexOf("print") !== -1) openAll();
+</script>
+</body>
+</html>

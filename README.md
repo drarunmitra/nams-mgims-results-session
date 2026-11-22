@@ -5,3 +5,5 @@ Presenter: Dr Rahul Narang, AIIMS Bibinagar. Slides adapted from material by Dr 
 
 - `index.html`: the slide deck (open in any browser; press `S` for speaker notes)
 - `Results_Session4_NAMS_MGIMS.pdf`: PDF copy of the slides
+- `facilitator_guide.html`: facilitator guide (prep checklist, run of show, answer keys, likely questions)
+- `Facilitator_Guide_Session4.pdf`: PDF copy of the facilitator guide
